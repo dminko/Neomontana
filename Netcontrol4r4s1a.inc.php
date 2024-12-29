@@ -26,7 +26,7 @@ class Netcontrol4r4s1a
 
     function init($ip, $port = 80, $user = 'admin', $pass = 'admin')
     {
-        $url = "http://" . $ip . "/iocfg.js"; // die($url);
+        $url = "http://" . $ip . ":" . $port . "/iocfg.js"; // die($url);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
